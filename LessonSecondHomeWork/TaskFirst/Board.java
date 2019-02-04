@@ -1,29 +1,32 @@
-
 import java.util.Arrays;
 
 public class Board {
-	private Shape[] board = new Shape[4];
+    private Shape[] shap;
     
-    public Board(Shape[] board) {
+    public Board() {
 		super();
-		this.board = board;
+		this.shap = new Shape[4];
 	}
 
-	public Board() {
-		super();
+	public Shape[] getShap() {
+		return shap;
+	}
+
+	public void setShap(Shape[] shap) {
+		this.shap = shap;
 	}
 
 	public void addNewShape(int index, Shape shape) {
-            board[index] = shape;
+            shap[index] = shape;
     }
 
     public void delShape(int index) {
-            board[index] = null;
+            shap[index] = null;
     }
     
     public double getArea() {
             double area = 0;
-            for (Shape figure:board
+            for (Shape figure:shap
                  ) {
                     if (figure != null)
                     area += figure.getArea();
@@ -33,6 +36,6 @@ public class Board {
 
     @Override
     public String toString() {
-            return "Board = " + Arrays.toString(board);
+            return "Board = " + Arrays.toString(shap);
     }
 }
