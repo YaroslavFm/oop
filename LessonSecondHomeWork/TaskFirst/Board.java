@@ -8,14 +8,6 @@ public class Board {
 		this.shap = new Shape[4];
 	}
 
-	public Shape[] getShap() {
-		return shap;
-	}
-
-	public void setShap(Shape[] shap) {
-		this.shap = shap;
-	}
-
 	public void addNewShape(int index, Shape shape) {
             shap[index] = shape;
     }
